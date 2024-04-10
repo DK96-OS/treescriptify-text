@@ -72,6 +72,18 @@ test
     result = list(read_tree_text(text))
     print(result)
     assert len(result) == 10
+    assert result == [
+        TreeNodeData(0, True, 'test'),
+        TreeNodeData(1, False, '__init__.py'),
+        TreeNodeData(1, True, 'input'),
+        TreeNodeData(2, False, '__init__.py'),
+        TreeNodeData(2, False, 'test_argument_parser.py'),
+        TreeNodeData(2, False, 'test_file_validation.py'),
+        TreeNodeData(2, False, 'test_string_validation.py'),
+        TreeNodeData(1, True, 'treescriptify'),
+        TreeNodeData(2, False, 'test_script_writer.py'),
+        TreeNodeData(2, False, 'test_tree_reader.py'),
+    ]
 
 
 def test_read_tree_text_complex_tree2_returns_data():
