@@ -28,12 +28,10 @@ def _process_line(line: str) -> TreeNodeData | None:
     """
     # Extract the name of the file or directory
     if (name := line.strip('│ └── ├\xa0')) == "":
-        return None
-    # throw away empty lines and comments
-    if len(name) == 0 or name.startswith('#') or name.startswith('//'):
-        return None
-    # Determine if it's a directory
-    is_dir = False
+        return None # Ignore Empty Lines
+    if name.startswith('#') or name.startswith('//'):
+        return None # Ignore comments
+    # Determine directory status
     if name.endswith('/'):
         is_dir = True
         name = name[:-1] # If it's a directory, remove the trailing slash
@@ -45,7 +43,8 @@ def _process_line(line: str) -> TreeNodeData | None:
     elif '.' not in name:
         # no file extension
         is_dir = True
-    #
+    else:
+        is_dir = False
     return TreeNodeData(_calculate_depth(line), is_dir, name)
 
 
