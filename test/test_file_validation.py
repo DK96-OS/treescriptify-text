@@ -3,7 +3,7 @@
 import pytest
 from pathlib import Path
 
-from input.file_validation import validate_input_file
+from treescriptify_text.file_validation import validate_input_file
 
 
 @pytest.mark.parametrize(

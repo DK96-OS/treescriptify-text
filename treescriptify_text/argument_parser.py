@@ -1,9 +1,9 @@
 """Argument Parsing Methods
 """
 from argparse import ArgumentParser
-from input.file_validation import validate_input_file
 
-from input.input_data import InputData
+from .file_validation import validate_input_file
+from .input_data import InputData
 
 
 def parse_args(arguments: list[str]) -> InputData:

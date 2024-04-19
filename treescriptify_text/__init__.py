@@ -1,8 +1,8 @@
 """TreeScriptify Package
 """
-from input.input_data import InputData
-from treescriptify.tree_reader import read_tree_text
-from treescriptify.script_writer import generate_script
+from .input_data import InputData
+from .tree_reader import read_tree_text
+from .script_writer import generate_script
 
 
 def tsfy(data: InputData) -> str:
