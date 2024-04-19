@@ -1,7 +1,7 @@
 """ Testing Tree Reader Methods.
 """
-from treescriptify.tree_node_data import TreeNodeData
-from treescriptify.tree_reader import read_tree_text
+from treescriptify_text.tree_node_data import TreeNodeData
+from treescriptify_text.tree_reader import read_tree_text
 
 
 def test_read_tree_text_empty_text_returns_empty_list():

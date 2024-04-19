@@ -1,7 +1,7 @@
 """Testing String Validation Methods
 """
 import pytest
-from input.string_validation import validate_name
+from treescriptify_text.string_validation import validate_name
 
 
 @pytest.mark.parametrize(

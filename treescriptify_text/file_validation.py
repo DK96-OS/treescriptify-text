@@ -4,7 +4,7 @@
 from pathlib import Path
 from sys import exit
 
-from input.string_validation import validate_name
+from .string_validation import validate_name
 
 
 def validate_input_file(file_name: str) -> str:

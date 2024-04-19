@@ -2,8 +2,8 @@
 """
 import pytest
 
-from treescriptify.script_writer import generate_script
-from treescriptify.tree_node_data import TreeNodeData
+from treescriptify_text.script_writer import generate_script
+from treescriptify_text.tree_node_data import TreeNodeData
 
 
 def generator_single_dir_node(name: str, depth: int=0):

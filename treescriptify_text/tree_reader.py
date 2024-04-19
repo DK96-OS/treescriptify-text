@@ -3,7 +3,7 @@
 from itertools import groupby
 from typing import Generator
 
-from treescriptify.tree_node_data import TreeNodeData
+from .tree_node_data import TreeNodeData
 
 
 def read_tree_text(tree_text: str) -> Generator[TreeNodeData, None, None]:

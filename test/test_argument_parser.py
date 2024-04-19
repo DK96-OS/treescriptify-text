@@ -3,8 +3,8 @@
 from pathlib import Path
 import pytest
 
-from input.input_data import InputData
-from input.argument_parser import parse_args
+from treescriptify_text.input_data import InputData
+from treescriptify_text.argument_parser import parse_args
 
 
 @pytest.mark.parametrize(
