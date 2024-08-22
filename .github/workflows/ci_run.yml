@@ -32,5 +32,5 @@ jobs:
       - name: Upload Test Coverage Reports
         uses: actions/upload-artifact@v4
         with:
-          name: treescriptify-text-{{ matrix.python-version }}cov
+          name: treescriptify-text-${{ matrix.python-version }}-cov
           path: htmlcov/
