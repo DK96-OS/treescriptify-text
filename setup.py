@@ -23,6 +23,7 @@ setup(
             'treescriptify-text=treescriptify_text.__main__:main',
         ],
     },
+    python_requires='>=3.8',
     classifiers=[
         'Natural Language :: English',
         'Operating System :: OS Independent',
@@ -34,5 +35,6 @@ setup(
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
+        'Programming Language :: Python :: 3.13',
     ],
 )
