@@ -22,7 +22,7 @@ def test_read_tree_text_single_file_returns_single_data():
     assert len(result) == 1
     assert result[0].name == 'file.txt'
     assert result[0].depth == 0
-    assert result[0].is_dir == False
+    assert not result[0].is_dir
 
 
 def test_read_tree_text_single_dir_returns_single_data():
@@ -31,7 +31,7 @@ def test_read_tree_text_single_dir_returns_single_data():
     assert len(result) == 1
     assert result[0].name == 'my-app'
     assert result[0].depth == 0
-    assert result[0].is_dir == True
+    assert result[0].is_dir
 
 
 def test_read_tree_text_basic_tree_returns_data():
