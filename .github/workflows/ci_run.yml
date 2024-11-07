@@ -37,5 +37,5 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: treescriptify-text-${{ matrix.python-version }}-cov
+          name: treescriptify-text-${{ matrix.os }-${{ matrix.python-version }}-cov
           path: htmlcov/
