@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="treescriptify-text",
-    version="0.3",
+    version="0.3.1",
     description="Create TreeScript from a Text file that contains tree-like file information.",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -16,7 +16,7 @@ setup(
         "Source Code": "https://github.com/DK96-OS/treescriptify-text"
     },
     license="GPLv3",
-    packages=find_packages(exclude=['test']),
+    packages=find_packages(exclude=['test', 'test.*']),
     entry_points={
         'console_scripts': [
             'treescriptify_text=treescriptify_text.__main__:main',
@@ -24,6 +24,7 @@ setup(
         ],
     },
     python_requires='>=3.10',
+    keywords=['treescript'],
     classifiers=[
         'Natural Language :: English',
         'Operating System :: OS Independent',
