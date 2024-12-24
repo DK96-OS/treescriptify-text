@@ -44,7 +44,6 @@ test
     └── test_tree_reader.py
     '''
     result = list(read_tree_text(text))
-    print(result)
     assert len(result) == 6
     assert result == [
         TreeNodeData(0, True, 'test'),
@@ -70,7 +69,6 @@ test
     └── test_tree_reader.py
     '''
     result = list(read_tree_text(text))
-    print(result)
     assert len(result) == 10
     assert result == [
         TreeNodeData(0, True, 'test'),
@@ -114,7 +112,6 @@ def test_read_tree_text_complex_tree2_returns_data():
         └── Extensions.kt
     '''
     result = list(read_tree_text(text))
-    print(result)
     assert len(result) == 22
     assert result == [
         TreeNodeData(0, True, 'com'),
@@ -139,4 +136,26 @@ def test_read_tree_text_complex_tree2_returns_data():
         TreeNodeData(4, False, 'ProductCatalogPage.kt'),
         TreeNodeData(2, True, 'utils'),
         TreeNodeData(3, False, 'Extensions.kt'),
+    ]
+
+
+def test_read_tree_text_issue_9_returns_data():
+    text = '''poetry-demo
+├── pyproject.toml
+├── README.md
+├── poetry_demo
+│   └── __init__.py
+└── tests
+    └── __init__.py'''
+    result = list(read_tree_text(text))
+    print(result)
+    assert len(result) == 7
+    assert result == [
+        TreeNodeData(0, True, 'poetry-demo'),
+        TreeNodeData(1, False, 'pyproject.toml'),
+        TreeNodeData(1, False, 'README.md'),
+        TreeNodeData(1, True, 'poetry_demo'),
+        TreeNodeData(2, False, '__init__.py'),
+        TreeNodeData(1, True, 'tests'),
+        TreeNodeData(2, False, '__init__.py'),
     ]
